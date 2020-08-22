@@ -1,0 +1,25 @@
+
+html,body,h1,h2,h3,h4,h5 
+{
+	font-family: "Raleway", sans-serif
+}
+body{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+	opacity: 0.9;
+}
+.w3-padding-16{
+	border-radius: 10px;
+}
+.circle{
+	width:2rem;
+	height:2rem;
+	background-color: green; 
+	border-radius: 60%;
+}
+a w3-padding{
+	color: blue;
+}

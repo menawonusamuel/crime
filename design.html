@@ -1,0 +1,317 @@
+<!--A Design by Samuel Menawonu
+Author: Samuel Menawonu
+Matric No: RGU46767
+License: Creative Commons Attribution 3.0 Unported
+Github URL: http://github.com/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<head>
+  <title>Aberdeen Onlinline Police Reporting Dashboard | Home :: Samuel Menawonu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Online Reporting template , Bootstrap Templates, Android Compatible web template, 
+  Smartphone Compatible web template,  Responsive Web design" />
+  <!-- bootstrap-css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <!-- W3-css -->
+  <link rel="stylesheet" type="text/css" href="css/lib/w3.css">
+  <!-- Custom CSS -->
+  <link href="css/design.css" rel='stylesheet' type='text/css' />
+  <!-- fontawesome CSS -->
+  <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+
+    <style>
+        html,body,h1,h2,h3,h4,h5 {
+            font-family: "Raleway", sans-serif;
+            }
+        #bases {
+           display:none;
+        }
+        #commands{
+            display:none;
+        }
+    </style>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+</head>
+<body class="bg-light">
+
+<!-- Top container -->
+<div class="w3-container sticky fixed-top w3-dark-blue bg-primary w3-large w3-padding" style="z-index:4">
+  <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-right">Logo</span>
+</div>
+
+<!-- Sidenav/menu -->
+<nav class="w3-sidenav w3-collapse w3-dark-grey w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+       <div class="circle"></div>
+    </div>
+    <div class="w3-col s8">
+      <span>Welcome, <strong>Admin</strong></span><br>
+      <a href="#" class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-hover-none w3-hover-text-green w3-show-inline-block"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-hover-none w3-hover-text-blue w3-show-inline-block"><i class="fa fa-cog"></i></a>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>Dashboard</h5>
+  </div>
+   <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+  <a href="http://localhost/crime/design.html" class="  w3-padding w3-blue " onclick="home()"><i class="fa fa-users fa-fw"></i>  Home</a>
+  <div id="accordion">
+      <a href="#" class="w3-padding " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" ><i class="fa fa-eye fa-fw"></i>  Police Bases</a>
+      <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+          <a href="#bases?base=1" onclick="bases()" class="w3-padding btn btn-link"><i class="fa fa-bullseye fa-fw"></i>  Add Police Bases</a>
+      </div>
+      <a href="#" class="w3-padding" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><i class="fa fa-users fa-fw"></i>  Police Departments</a>
+      <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordion">
+          <a href="#depts?id=1" onclick="commands()" class="w3-padding btn btn-link b"><i class="fa fa-bullseye fa-fw"></i>  Add Police Departments</a>
+      </div>
+      <a href="#" class="w3-padding" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><i class="fa fa-bullseye fa-fw"></i>  Police</a>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <a href="#police?id=1" onclick="depts()" class="w3-padding btn btn-link b"><i class="fa fa-bullseye fa-fw"></i>  Add Police </a>
+      </div>
+      <a href="#" class="w3-padding" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><i class="fa fa-diamond fa-fw"></i>  Most wanted</a>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+          <a href="#mwanted?id=1" onclick="police()" class="w3-padding btn btn-link b"><i class="fa fa-bullseye fa-fw"></i>  Add Most Wanted</a>
+      </div>
+      <a href="#" class="w3-padding" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive"><i class="fa fa-bell fa-fw"></i>  CrimeFiles</a>
+      <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+          <a href="#cfile?id=1" onclick="cfile()" class="w3-padding btn btn-link b"><i class="fa fa-bullseye fa-fw"></i>  List all Crime Files</a>
+      </div>
+      <a href="#" class="w3-padding"><i class="fa fa-bank fa-fw"></i>  Settings</a>
+    </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+<div id="home">
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+  </header>
+
+  <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+      <div class="w3-container  bg-primary w3-padding-16">
+        <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>52</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Solved Crimes</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container  bg-info w3-padding-16">
+        <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>99</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Pending Crimes</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>23</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>New Crimes</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>50</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Closed Crime files</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-section">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="third">
+          <h5>General Stats</h5>
+            <p>New Visitors</p>
+            <div class="progress w3-grey">
+                <div id="myBar" class="progress-bar progress-bar-striped progress-bar-animated w3-green" style="width:25%">
+                    <div class="w3-center w3-text-white">+25%</div>
+                </div>
+            </div>
+             <p>New Users</p>
+    <div class="progress w3-grey">
+      <div id="myBar" class="progress-bar progress-bar-striped progress-bar-animated w3-orange" style="width:50%">
+        <div class="w3-center w3-text-white">50%</div>
+      </div>
+    </div>
+
+    <p>Bounce Rate</p>
+    <div class="progress w3-grey">
+      <div id="myBar" class="progress-bar progress-bar-striped progress-bar-animated w3-red" style="width:75%">
+        <div class="w3-center w3-text-white">75%</div>
+      </div>
+    </div>
+    </div><hr>
+      <div class="w3-twothird"><br />
+        <h5>Crime Records</h5>
+        <table class="w3-table w3-striped w3-white">
+          <tr>
+            <td><i class="fa fa-user w3-blue w3-padding-tiny"></i></td>
+            <td>New record, over 90 views.</td>
+            <td><i>10 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-bell w3-red w3-padding-tiny"></i></td>
+            <td>Database error.</td>
+            <td><i>15 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-users w3-orange w3-text-white w3-padding-tiny"></i></td>
+            <td>New record, over 40 users.</td>
+            <td><i>17 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-comment w3-red w3-padding-tiny"></i></td>
+            <td>New comments.</td>
+            <td><i>25 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-bookmark w3-light-blue w3-padding-tiny"></i></td>
+            <td>Check transactions.</td>
+            <td><i>28 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-laptop w3-red w3-padding-tiny"></i></td>
+            <td>CPU overload.</td>
+            <td><i>35 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-share-alt w3-green w3-padding-tiny"></i></td>
+            <td>New shares.</td>
+            <td><i>39 mins</i></td>
+          </tr>
+        </table>
+      </div>
+      
+    </div>
+  </div>
+  <hr>
+
+  <div class="w3-container">
+    <h5>General Record</h5>
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white table table-dark">
+      <tr>
+        <td>Police Commands</td>
+        <td>65</td>
+      </tr>
+      <tr>
+        <td>Police Department</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <td>Police Officers</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Number of Sergeants</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>Number of Divisional Polices</td>
+        <td>1.9%</td>
+      </tr>
+      <tr>
+        <td>Number of Sherrif</td>
+        <td>1.5%</td>
+      </tr>
+    </table><br>
+  </div>
+  <hr>
+</div>
+
+<div id="bases">
+    Hello worldw3-container sticky fixed-bottom w3-dark-blue bg-primary w3-large w3-paddingw3-container sticky fixed-bottom w3-dark-blue bg-primary w3-large w3-paddingw3-container sticky fixed-bottom w3-dark-blue bg-primary w3-large w3-paddingw3-container sticky fixed-bottom w3-dark-blue bg-primary w3-large w3-paddingw3-container sticky fixed-bottom w3-dark-blue bg-primary w3-large w3-paddingw3-container sticky fixed-bottom w3-dark-blue bg-primary w3-large w3-paddingw3-container sticky fixed-bottom w3-dark-blue bg-primary w3-large w3-paddingw3-container sticky fixed-bottom w3-dark-blue bg-primary w3-large w3-padding
+</div>
+<div id="commands">
+    <form action ="command_add.php" method="post">
+  Command Name:<input required type="text" name="command_name" placeholder="Police Scotland" required><br>
+  Command Division:<input required type="text" name="command_div" placeholder="North Division" required><br>
+  Street:<input type="text" name="street" placeholder="Seaton"  required><br>
+  Town: <input type="text" name="town" placeholder="Aaberdenn" required><br>
+  Postcode:<input type="text" name="postcode" required placeholder="AB1X 43"><br>
+</div>
+  
+  <!-- Footer -->
+<div class="w3-container sticky fixed-bottom w3-dark-blue bg-primary w3-large w3-padding" style="z-index:4">
+  <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-right">Logo</span>
+</div>
+
+  <!-- End page content -->
+</div>
+
+<script>
+// Get the Sidenav
+var mySidenav = document.getElementById("mySidenav");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidenav, and add overlay effect
+function w3_open() {
+    if (mySidenav.style.display === 'block') {
+        mySidenav.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidenav.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidenav with the close button
+function w3_close() {
+    mySidenav.style.display = "none";
+    overlayBg.style.display = "none";
+}
+
+        var x = document.getElementById("home");
+        var y = document.getElementById("bases");
+        var z = document.getElementById("commands");
+        function home() {
+            x.style.display = "block";
+            y.style.display = "none";
+            z.style.display = "none";
+        }
+        function bases() {
+            y.style.display = "block";
+            x.style.display = "none";
+            z.style.display = "none";
+        }
+        function commands() {
+            z.style.display = "block";
+            x.style.display = "none";
+            y.style.display = "none";
+        }
+</script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_analytics&stacked=h by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Oct 2016 10:32:17 GMT -->
+</html>

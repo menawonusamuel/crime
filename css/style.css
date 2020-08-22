@@ -1,0 +1,36 @@
+.banner{
+    background-image: url("roman-koester.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+}
+.field{
+    margin-top:20%;
+    color: orange;
+}
+.field h3{
+    color: skyblue;
+}
+.btn{
+    margin: 30px;
+}
+.pic{
+    background:#f1be6d;
+}
+.pics{
+    background:lightblue;
+}
+blockquote{
+    color: whitesmoke;
+}
+
+.container, .container-fluid{
+    padding: 20px 20px;
+}
+.card{
+    border:none;
+}
+.btn, .btnn{
+    color: aquamarine;
+    background-color: black;
+}
